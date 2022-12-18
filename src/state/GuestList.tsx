@@ -1,6 +1,16 @@
+import { useState } from "react";
+
 // no angle brackets because not expecting any props; interface only used when props received
 const GuestList: React.FC = () => {
-  return <div>Guest List</div>;
+  const [name, setName] = useState("");
+
+  return (
+    <div>
+      <h3>Guest List</h3>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <button>Add Guest</button>
+    </div>
+  );
 };
 
 export default GuestList;
