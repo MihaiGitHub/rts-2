@@ -8,6 +8,8 @@ const users = [
 
 const UserSearch: React.FC = () => {
   const [name, setName] = useState("");
+  // user will either be an object like this or undefined
+  const [user, setUser] = useState<{ name: string; age: number } | undefined>();
 
   const onClick = () => {
     const foundUser = users.find((user) => {
