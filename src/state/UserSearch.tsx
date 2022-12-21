@@ -13,6 +13,8 @@ const UserSearch: React.FC = () => {
     const foundUser = users.find((user) => {
       return user.name === name;
     });
+
+    console.log(foundUser);
   };
 
   return (
